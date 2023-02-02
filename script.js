@@ -61,8 +61,8 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
-const logginDetails = document.querySelector('.loggin_details');
-logginDetails.style.opacity = 100;
+const loginDetails = document.querySelector('.login_details');
+loginDetails.style.opacity = 100;
 
 ////////////////////////////////////////////// 147. Creating DOM Elements
 const displayMovements = function (movements, sort = false) {
@@ -159,7 +159,7 @@ const startLogoutTimer = function () {
       clearInterval(timer);
       labelWelcome.textContent = 'Log in to get started';
       containerApp.style.opacity = 0;
-      logginDetails.style.opacity = 100;
+      loginDetails.style.opacity = 100;
     }
     // Decrese 1 sec
     time = time - 1;
@@ -231,7 +231,7 @@ btnLogin.addEventListener('click', function (e) {
     updateUI(currentAccount);
 
     // Remove loggin details
-    logginDetails.style.opacity = 0;
+    loginDetails.style.opacity = 0;
   }
 });
 
@@ -320,6 +320,7 @@ btnClose.addEventListener('click', function (e) {
   inputCloseUsername.value = inputClosePin.value = '';
 
   labelWelcome.textContent = 'Log in to get started';
+  loginDetails.style.opacity = 100;
 });
 
 let sorted = false;
