@@ -120,7 +120,8 @@ const calcDisplaySummary = function (account) {
       return int >= 1;
     })
     .reduce((acc, int) => acc + int, 0);
-  labelSumInterest.textContent = `${interest}€`;
+  const [interestEur, interestCent] = String(interest).split('.');
+  labelSumInterest.textContent = `${interestEur}.${interestCent.padEnd(2, 0)}€`;
 };
 
 ////////////////////////////////////////151. Computing Usernames
@@ -159,7 +160,7 @@ const startLogoutTimer = function () {
       clearInterval(timer);
       labelWelcome.textContent = 'Log in to get started';
       containerApp.style.opacity = 0;
-      loginDetails.style.opacity = 100;
+      //loginDetails.style.opacity = 100;
     }
     // Decrese 1 sec
     time = time - 1;
@@ -231,7 +232,7 @@ btnLogin.addEventListener('click', function (e) {
     updateUI(currentAccount);
 
     // Remove loggin details
-    loginDetails.style.opacity = 0;
+    //loginDetails.style.opacity = 0;
   }
 });
 
@@ -320,7 +321,7 @@ btnClose.addEventListener('click', function (e) {
   inputCloseUsername.value = inputClosePin.value = '';
 
   labelWelcome.textContent = 'Log in to get started';
-  loginDetails.style.opacity = 100;
+  //loginDetails.style.opacity = 100;
 });
 
 let sorted = false;
