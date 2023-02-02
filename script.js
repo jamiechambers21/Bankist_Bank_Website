@@ -61,8 +61,8 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
-const loginDetails = document.querySelector('.login_details');
-loginDetails.style.opacity = 100;
+// const loginDetails = document.querySelector('.login_details');
+// loginDetails.style.opacity = 100;
 
 ////////////////////////////////////////////// 147. Creating DOM Elements
 const displayMovements = function (movements, sort = false) {
